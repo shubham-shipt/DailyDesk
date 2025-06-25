@@ -6,7 +6,7 @@ A lightweight tool to manage your workforce efficiently.
 ---
 
 ## 📂 Pages & Structure
-
+```
 DailyDesk-/
 ├── attendance.html
 ├── c34.css
@@ -19,8 +19,7 @@ DailyDesk-/
 ├── reports.html
 ├── settings.html
 └── tasks.html
-
-
+```
 ---
 
 ## ✨ Features
