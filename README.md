@@ -8,8 +8,8 @@ A lightweight tool to manage your workforce efficiently.
 
 <div align="center">
 
-<!-- Replace `preview.mp4` with your actual video file or use an embeddable YouTube iframe if preferred -->
-<video src="preview.mp4" controls autoplay loop muted playsinline width="700" style="border-radius: 16px; border: 3px solid #38bdf8; box-shadow:0 6px 24px #0003; margin-bottom:1.5rem;">
+
+<video src="public/preview.mp4" controls autoplay loop muted playsinline width="700" style="border-radius: 16px; border: 3px solid #38bdf8; box-shadow:0 6px 24px #0003; margin-bottom:1.5rem;">
   Your browser does not support the video tag.
 </video>
 
@@ -29,9 +29,6 @@ A lightweight tool to manage your workforce efficiently.
 </span>
 <span style="display:inline-block; border:2px solid #f59e42; border-radius:20px; padding:4px 12px; margin:4px; background:#fff7ed;">
   <img alt="Live Demo" src="https://img.shields.io/badge/Demo-Available-orange?logo=youtube&style=flat-square" style="vertical-align:middle;"/>
-</span>
-<span style="display:inline-block; border:2px solid #f87171; border-radius:20px; padding:4px 12px; margin:4px; background:#fef2f2;">
-  <img alt="Made in India" src="https://img.shields.io/badge/Made%20in-India-red?logo=india&style=flat-square" style="vertical-align:middle;"/>
 </span>
 <span style="display:inline-block; border:2px solid #eab308; border-radius:20px; padding:4px 12px; margin:4px; background:#fefce8;">
   <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=flat-square" style="vertical-align:middle;"/>
@@ -56,18 +53,26 @@ A lightweight tool to manage your workforce efficiently.
 ## 📂 Pages & Structure
 
 ```
-DailyDesk-/
-├── attendance.html
-├── c34.css
-├── Dashboard.html
-├── employees.html
-├── icon.png
-├── index.html
-├── leave.html
+DailyDesk/
+├── .github/
+│   └── workflows/
+├── public/
+│   └── icon.png
+├── src/
+│   ├── assets/
+│   │   └── background.mp4
+│   ├── css/
+│   │   └── c34.css
+│   └── pages/
+│       ├── Dashboard.html
+│       ├── attendance.html
+│       ├── employees.html
+│       ├── leave.html
+│       ├── reports.html
+│       ├── settings.html
+│       └── tasks.html
 ├── README.md
-├── reports.html
-├── settings.html
-└── tasks.html
+└── index.html
 ```
 
 ---
