@@ -4,12 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/public/icon.png">
-    <link rel="stylesheet" href="/src/css/c34.css">
     <title>Login</title>
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Quicksand", sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+    /* ====== DARKEN BACKGROUND VIDEO ONLY ====== */
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none;
+      filter: brightness(0.38);
+    }
+
+    /* Ring animation and colors */
+    .ring {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ring i {
+      position: absolute;
+      inset: 0;
+      border: 2px solid #1F2937;
+      transition: 0.5s;
+      animation: backwards;
+    }
+    .ring i:nth-child(1) {
+      border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+      animation: animate 6s linear infinite;
+      border-color: var(--clr, #5a0d7e); /* Violet (override) */
+    }
+    .ring i:nth-child(2) {
+      border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+      animation: animate 4s linear infinite;
+      border-color: var(--clr, #96802083); /* Goldish (override) */
+    }
+    .ring i:nth-child(3) {
+      border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+      animation: animate2 10s linear infinite;
+      border-color: var(--clr, #f3550c); /* Orange (override) */
+    }
+    .ring:hover i {
+      border: 6px solid var(--clr);
+      filter: drop-shadow(0 0 20px var(--clr));
+    }
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes animate2 {
+      0% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    /* Login form styles */
+    .login {
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .login h2 {
+      font-size: 2em;
+      color: #afb3bb;
+    }
+    .login .inputBx {
+      position: relative;
+      width: 100%;
+    }
+    .login .inputBx input {
+      position: relative;
+      width: 100%;
+      padding: 12px 20px;
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 40px;
+      font-size: 1.2em;
+      color: #fff;
+      box-shadow: none;
+      outline: none;
+    }
+    .login .inputBx input[type="submit"] {
+      width: 100%;
+      background: linear-gradient(90deg, #85e607 0%, #2b08a8 60%, #f9a826 100%);
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.25s, box-shadow 0.2s;
+      box-shadow: 0 2px 10px rgba(54,182,214, 0.10), 0 1.5px 8px rgba(165,140,255, 0.13);
+    }
+    .login .inputBx input[type="submit"]:hover {
+      background: linear-gradient(90deg, #f9a826 0%, #caeb10 60%, #5907a7 100%);
+      box-shadow: 0 4px 16px rgba(249,168,38, 0.15), 0 2px 12px rgba(54,182,214, 0.18);
+    }
+    .login .inputBx input::placeholder {
+      color: rgba(223, 232, 250, 0.85);
+    }
+    .login .links {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+    .login .links a {
+      color: #8da1c7;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .login .links a:hover {
+      color: #a58cff;
+    }
+    </style>
 </head>
 <body>
     <video class="bg-video" src="/src/assets/background.mp4" autoplay loop muted playsinline></video>
-<div class="bg-overlay"></div>
+    <div class="bg-overlay"></div>
     <div class="ring">
         <i style="--clr:#5a0d7e ;"></i>
         <i style="--clr: #96802083 ;"></i>
@@ -38,6 +183,6 @@
         e.preventDefault();
         window.location.href = 'src/pages/Dashboard.html';
     });
-</script>
+    </script>
 </body>
 </html>
