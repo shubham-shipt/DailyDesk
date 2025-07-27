@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/public/icon.png">
+    <link rel="stylesheet" href="/src/css/c34.css">
+    <title>Login</title>
+</head>
+<body>
+    <video class="bg-video" src="/src/assets/background.mp4" autoplay loop muted playsinline></video>
+<div class="bg-overlay"></div>
+    <div class="ring">
+        <i style="--clr:#5a0d7e ;"></i>
+        <i style="--clr: #96802083 ;"></i>
+        <i style="--clr: #f3550c ;"></i>
+        <div class="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="inputBx">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="inputBx">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="inputBx">
+                    <input type="submit" value="Sign in">
+                </div>
+            </form>
+            <div class="links">
+                <a href="https://github.com/shubham-shipt">Forget Password</a>
+                <a href="https://github.com/shubham-shipt">Signup</a>
+            </div>
+        </div>
+    </div>
+   <script>
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.location.href = 'src/pages/Dashboard.html';
+    });
+</script>
+</body>
+</html>
