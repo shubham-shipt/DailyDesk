@@ -20,9 +20,7 @@
       min-height: 100vh;
       width: 100%;
       overflow: hidden;
-    }
-    /* ====== DARKEN BACKGROUND VIDEO ONLY ====== */
-    .bg-video {
+    }.bg-video {
       position: fixed;
       top: 0;
       left: 0;
@@ -49,23 +47,19 @@
       border: 2px solid #1F2937;
       transition: 0.5s;
       animation: backwards;
-    }
-    .ring i:nth-child(1) {
+    }.ring i:nth-child(1) {
       border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
       animation: animate 6s linear infinite;
       border-color: var(--clr, #5a0d7e); /* Violet (override) */
-    }
-    .ring i:nth-child(2) {
+    }.ring i:nth-child(2) {
       border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
       animation: animate 4s linear infinite;
       border-color: var(--clr, #96802083); /* Goldish (override) */
-    }
-    .ring i:nth-child(3) {
-      border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    }.ring i:nth-child(3) {
+   border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
       animation: animate2 10s linear infinite;
       border-color: var(--clr, #f3550c); /* Orange (override) */
-    }
-    .ring:hover i {
+    } .ring:hover i {
       border: 6px solid var(--clr);
       filter: drop-shadow(0 0 20px var(--clr));
     }
@@ -84,10 +78,7 @@
       100% {
         transform: rotate(0deg);
       }
-    }
-
-    /* Login form styles */
-    .login {
+    } .login {
       position: absolute;
       width: 300px;
       height: 100%;
